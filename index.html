@@ -21,12 +21,14 @@
     >
       <!-- Home Screen section -->
       <section
-        class="home text-white flex flex-col justify-center min-h-screen items-center hidden"
+        class="home text-white flex flex-col justify-center min-h-screen items-center"
       >
         <div class="flex flex-col gap-6 items-center">
           <h1 class="text-8xl font-anton uppercase">Alpha Class Pro</h1>
           <p>Unleash Your Keyboard Kun G Fu : Press Enter to play</p>
-          <button class="btn bg-white text-black font-bold">Play Now</button>
+          <button onclick="play()" class="btn bg-white text-black font-bold">
+            Play Now
+          </button>
         </div>
       </section>
       <!-- Play Ground Scren section start -->
@@ -99,7 +101,10 @@
         </div>
       </section>
       <!-- Play Ground Section End -->
-      <section class="score flex justify-center items-center min-h-screen">
+      <!-- final score section -->
+      <section
+        class="score flex justify-center hidden items-center min-h-screen"
+      >
         <div
           class="text-white space-y-6 text-center bg-[#ffffff33] p-8 rounded-lg"
         >
@@ -112,5 +117,8 @@
         </div>
       </section>
     </main>
+
+    <!-- connecting scripts -->
+    <script src="scripts/alpha-clash.js"></script>
   </body>
 </html>
