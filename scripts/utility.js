@@ -11,5 +11,13 @@ function showElementById(elementId) {
 function getRandomAlphabet() {
   const alphabateString = "abcdefghijklmnopqrstuvwxyz";
   const alphabets = alphabateString.split("");
-  console.log(alphabets);
+
+  //   get a random number
+  const randomNumber = Math.random() * 25;
+  const index = Math.round(randomNumber);
+
+  const alphabet = alphabets[index];
+  console.log(alphabet);
 }
+
+getRandomAlphabet();
