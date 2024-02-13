@@ -8,6 +8,11 @@ function showElementById(elementId) {
   element.classList.remove("hidden");
 }
 
+function addBackgroundColorById(elementId) {
+  const element = document.getElementById(elementId);
+  element.classList.add("bg-orange-400");
+}
+
 function getRandomAlphabet() {
   const alphabateString = "abcdefghijklmnopqrstuvwxyz";
   const alphabets = alphabateString.split("");
@@ -17,7 +22,7 @@ function getRandomAlphabet() {
   const index = Math.round(randomNumber);
 
   const alphabet = alphabets[index];
-  console.log(alphabet);
+  return alphabet;
 }
 
 getRandomAlphabet();
