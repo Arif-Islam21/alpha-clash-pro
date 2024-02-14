@@ -27,6 +27,3 @@ function getRandomAlphabet() {
 
 getRandomAlphabet();
 //
-document
-  .getElementById("myElement")
-  .classList.add("active", "visible", "highlight");
