@@ -7,6 +7,25 @@
 //   playgroundSection.classList.remove("hidden");
 // }
 
+// detect key press and its value
+document.addEventListener("keyup", function handleKeyboardButonPress(e) {
+  const playerPressed = e.key;
+  // console.log("player pressed key:", playerPressed);
+
+  // get expected alphabate
+  const currentAlphabateElement = document.getElementById("current-alphabate");
+  const currentAlphabate = currentAlphabateElement.innerText;
+  const expectedAlphabate = currentAlphabate.toLowerCase();
+  // console.log(expectedAlphabate, playerPressed);
+
+  // check matched or not
+  if (playerPressed === expectedAlphabate) {
+    console.log("you got a point");
+  } else {
+    console.log("you missed a life");
+  }
+});
+
 function continueGame() {
   // generate a random alphabate
   const alphabate = getRandomAlphabet();
