@@ -12,6 +12,11 @@ document.addEventListener("keyup", function handleKeyboardButonPress(e) {
   const playerPressed = e.key;
   // console.log("player pressed key:", playerPressed);
 
+  // stop the game if player pressed escape
+  if (playerPressed === "Escape") {
+    gameOver();
+  }
+
   // get expected alphabate
   const currentAlphabateElement = document.getElementById("current-alphabate");
   const currentAlphabate = currentAlphabateElement.innerText;
@@ -23,7 +28,7 @@ document.addEventListener("keyup", function handleKeyboardButonPress(e) {
     // update the score
     const currentScore = getTextElementValueById("current-score");
     const updatedScore = currentScore + 1;
-    console.log(updatedScore);
+    // console.log(updatedScore);
 
     setTextElementValueById("current-score", updatedScore);
 
@@ -68,4 +73,11 @@ function play() {
 function gameOver() {
   hideElementById("playground-screen");
   showElementById("final-score");
+  // update final score
+  const lastScore = getTextElementValueById("current-score");
+  // console.log(lastScore);
+  setTextElementValueById("game-score", lastScore);
+  // clear the last selected alphabate
+  const currentAlphabate = getElementTextById("current-alphabate");
+  removeBackgroundColorById(currentAlphabate);
 }
