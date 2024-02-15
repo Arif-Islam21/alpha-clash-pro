@@ -31,9 +31,14 @@ document.addEventListener("keyup", function handleKeyboardButonPress(e) {
     continueGame();
     removeBackgroundColorById(expectedAlphabate);
   } else {
+    // UPDATE THE LIFE VALUE
     const currentLife = getTextElementValueById("life-score");
     const updatedLife = currentLife - 1;
     setTextElementValueById("life-score", updatedLife);
+
+    if (updatedLife === 0) {
+      gameOver();
+    }
   }
 });
 
@@ -50,7 +55,17 @@ function continueGame() {
 }
 
 function play() {
+  // show only the playground
   hideElementById("home-screen");
+  hideElementById("final-score");
   showElementById("playground-screen");
+  // reset the score and life
+  setTextElementValueById("life-score", 5);
+  setTextElementValueById("current-score", 0);
   continueGame();
+}
+
+function gameOver() {
+  hideElementById("playground-screen");
+  showElementById("final-score");
 }
