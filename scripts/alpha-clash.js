@@ -81,3 +81,4 @@ function gameOver() {
   const currentAlphabate = getElementTextById("current-alphabate");
   removeBackgroundColorById(currentAlphabate);
 }
+// almost done ready to deploy
