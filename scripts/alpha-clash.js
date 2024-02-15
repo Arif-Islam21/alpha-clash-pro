@@ -21,6 +21,12 @@ document.addEventListener("keyup", function handleKeyboardButonPress(e) {
   // check matched or not
   if (playerPressed === expectedAlphabate) {
     // update the score
+    const currentScoreElement = document.getElementById("current-score");
+    const currentScoreText = currentScoreElement.innerText;
+    const currentScore = parseInt(currentScoreText);
+
+    const newScore = currentScore + 1;
+    currentScoreElement.innerText = newScore;
 
     // start a new round
     continueGame();
