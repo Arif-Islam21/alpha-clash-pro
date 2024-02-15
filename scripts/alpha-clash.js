@@ -83,3 +83,4 @@ function gameOver() {
 }
 // almost done ready to deploy
 // learning to deploy in netlify
+// learned about surge and netlify
