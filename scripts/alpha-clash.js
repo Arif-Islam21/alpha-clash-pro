@@ -20,7 +20,11 @@ document.addEventListener("keyup", function handleKeyboardButonPress(e) {
 
   // check matched or not
   if (playerPressed === expectedAlphabate) {
-    console.log("you got a point");
+    // update the score
+
+    // start a new round
+    continueGame();
+    removeBackgroundColorById(expectedAlphabate);
   } else {
     console.log("you missed a life");
   }
