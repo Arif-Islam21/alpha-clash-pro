@@ -82,3 +82,4 @@ function gameOver() {
   removeBackgroundColorById(currentAlphabate);
 }
 // almost done ready to deploy
+// learning to deploy in netlify
