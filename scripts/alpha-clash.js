@@ -21,18 +21,19 @@ document.addEventListener("keyup", function handleKeyboardButonPress(e) {
   // check matched or not
   if (playerPressed === expectedAlphabate) {
     // update the score
-    const currentScoreElement = document.getElementById("current-score");
-    const currentScoreText = currentScoreElement.innerText;
-    const currentScore = parseInt(currentScoreText);
+    const currentScore = getTextElementValueById("current-score");
+    const updatedScore = currentScore + 1;
+    console.log(updatedScore);
 
-    const newScore = currentScore + 1;
-    currentScoreElement.innerText = newScore;
+    setTextElementValueById("current-score", updatedScore);
 
     // start a new round
     continueGame();
     removeBackgroundColorById(expectedAlphabate);
   } else {
-    console.log("you missed a life");
+    const currentLife = getTextElementValueById("life-score");
+    const updatedLife = currentLife - 1;
+    setTextElementValueById("life-score", updatedLife);
   }
 });
 
